@@ -1,4 +1,4 @@
-app.controller('landingPageController',['$scope','spriteService', function($scope,spriteService){
+app.controller('flappyController',['$scope','spriteService', function($scope,spriteService){
 	
 	
 	spriteService.Sprite.prototype.draw = function(ctx, x , y){
@@ -226,8 +226,8 @@ app.controller('landingPageController',['$scope','spriteService', function($scop
 
 	//start and init game
 	function main() {
-		// create canvas and set width/height
-		canvas = document.createElement("canvas");
+		// get canvas and set width/height
+		canvas = document.getElementById("flappy-canvas");
 
 		width = window.innerWidth;
 		height = window.innerHeight;
@@ -257,7 +257,6 @@ app.controller('landingPageController',['$scope','spriteService', function($scop
 		// initate graphics and okbtn
 		var img = new Image();
 		img.onload = function() {
-			console.log('sprite is: ', sprite);
 			sprite.initSprites(img);
 			ctx.fillStyle = s_bg.color;
 

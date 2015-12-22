@@ -3,7 +3,7 @@ $routeProvider
     // route for the home page
     .when('/', {
         templateUrl : 'app/components/home/landingPageView.html',
-        controller  : 'landingPageController',
+        controller  : 'flappyController',
         
     })
     
