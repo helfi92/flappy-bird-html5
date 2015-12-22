@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video-Tagger</title>
+
+<!--css -->
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+
+<!--js-->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body ng-app="mainModule">
+    
+    <!-- Actual website -->    
+    <div ng-controller="navController"
+        ng-include="'app/shared/nav/navView.html'"></div>
+    <div ng-view></div>
+
+</body>
+
+
+<!--Modules-->
+<script src="app/app.module.js"></script>
+
+
+
+<!-- Controllers -->
+<script src="app/components/home/landingPageController.js"></script>
+<script src="app/shared/nav/navController.js"></script>
+
+
+
+
+<!--Services-->
+<script src="app/components/services/spriteService.js"></script>
+<!--Routes-->
+<script src="app/app.routes.js"></script>
+
+
+
+
+</html>
